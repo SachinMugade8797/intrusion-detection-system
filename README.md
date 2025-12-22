@@ -19,8 +19,8 @@ The **Virtual Perimeter Intrusion Detection System** is a real-time computer vis
 * Clean, readable, and maintainable codebase
   
 ---
+### 🏗️ System Architecture
 ```
-🏗️ System Architecture
 Input (Webcam / Video File)
         ↓
 Frame Processing (Grayscale + Blur)
@@ -86,7 +86,7 @@ intrusion-detection-system/
 ```
 
 
-
+---
 ## 📷 Video Input Support
 
 The system works with:
@@ -96,7 +96,7 @@ The system works with:
 
 This makes the project suitable for both **real-time monitoring** and **testing/demo purposes**.
 
----
+
 # Project Start
 <img width="1605" height="941" alt="Screenshot 2025-12-23 002817" src="https://github.com/user-attachments/assets/25010c11-ebd9-4b05-9df6-dbbd48d6281e" />
 
@@ -186,6 +186,19 @@ python main.py
 * Clean separation of concerns
 
 ---
+## 🔍 Assumptions
+
+#### This system is developed based on the following assumptions:
+* The camera remains fixed and stable (no camera shake).
+* The environment has sufficient lighting for motion detection.
+* Objects crossing the perimeter are large enough to exceed the minimum contour area.
+* Only one video source (webcam or video file) is processed at a time.
+* The virtual perimeter is defined as a single straight line.
+* Intrusion detection is based on motion, not object identity.
+* SQLite is used for local storage and demonstration purposes.
+* The system is designed for basic intrusion detection, not high-security production use.
+
+---
 
 ## 🧪 Example Use Case
 
@@ -201,12 +214,18 @@ This makes it a **clear and easy-to-understand example** of a virtual security p
 
 ---
 
-## 🔮 Future Improvements
+🚀 Future Improvements
 
-* Zone-based intrusion detection
-* WebSocket-based real-time dashboard
-* Cloud database integration
-* Alert notifications (email / SMS)
+* The system can be enhanced in the following ways:
+* Support for multiple perimeter lines or polygon-based restricted zones.
+* Integration of object detection models (e.g., YOLO) to classify humans, vehicles, etc.
+* Use WebSockets instead of REST API for real-time event streaming.
+* Add object tracking to avoid duplicate intrusion events.
+* Enable multi-camera support with centralized monitoring.
+* Improve detection accuracy in low-light or noisy environments.
+* Develop a web-based dashboard to visualize live feed and intrusion logs.
+* Migrate database to PostgreSQL or cloud storage for scalability.
+* Add alert notifications (email, SMS, or push notifications).
 
 ---
 
