@@ -214,7 +214,7 @@ This makes it a **clear and easy-to-understand example** of a virtual security p
 
 ---
 
-🚀 Future Improvements
+## 🚀 Future Improvements
 
 * The system can be enhanced in the following ways:
 * Support for multiple perimeter lines or polygon-based restricted zones.
